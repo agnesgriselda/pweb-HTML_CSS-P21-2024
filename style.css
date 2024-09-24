@@ -1,0 +1,247 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e6d6; /* Light brown background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flexbox for responsiveness */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #8B4513; /* Brown navbar */
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff; /* White text for better contrast */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(139, 69, 19, 0.6); /* Semi-transparent brown overlay */
+    z-index: 1; /* Place overlay above the background image */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    z-index: 2; /* Ensure slides are above the overlay */
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: burlywood;
+    z-index: 3; /* Ensure text is above all */
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-family: 'Cursive', sans-serif; /* Cursive font for more aesthetic appeal */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+
+/* Welcome Section */
+.welcome {
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome h1 {
+    margin: 20px 0;
+}
+
+/* Produk Section */
+.produk {
+    padding: 40px 20px;
+    background-color: #fff; /* Keep product section white */
+    text-align: center; /* Center align text */
+}
+
+.produk h2 {
+    margin-bottom: 20px; /* Spacing for the heading */
+}
+
+.produk-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Center items and allow wrapping */
+}
+
+.produk-item {
+    text-align: center;
+    width: calc(14.2857% - 20px); /* 7 items in a row with space */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.produk-item img {
+    width: 100%; /* Set width to 100% of the container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1; /* Ensure a square aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly raised effect */
+}
+
+.produk-item h3 {
+    margin: 10px 0 5px; /* Spacing for product title */
+}
+
+.produk-item p {
+    margin: 0; /* Remove default margin for price */
+}
+
+/* Kontak Section */
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #8B4513; /* Brown footer */
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+/* --------- Media Queries ----------- */
+/* Untuk layar dengan lebar maksimal 1024px (Tablet) */
+@media screen and (max-width: 1024px) {
+    .produk-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .produk-item {
+        width: calc(20% - 20px); /* 5 items in a row for tablet */
+    }
+
+    .navbar .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links li {
+        margin-right: 15px;
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 768px (Tablet lebih kecil) */
+@media screen and (max-width: 768px) {
+    .produk-item {
+        width: calc(33.3333% - 20px); /* 3 items in a row for small tablets */
+    }
+
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+    .produk-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 300px;
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 480px (Smartphone) */
+@media screen and (max-width: 480px) {
+    .produk-item {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .nav-links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .produk-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 250px;
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+}
