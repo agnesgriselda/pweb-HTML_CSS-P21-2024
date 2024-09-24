@@ -1,7 +1,6 @@
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0e6d6; /* Light brown background */
+    background-color: #f0e6d6; 
     color: #333;
     margin: 0;
     padding: 0;
@@ -16,7 +15,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: #8B4513; /* Brown navbar */
+    background-color: #8B4513; 
     padding: 10px;
     position: sticky;
     top: 0;
@@ -39,7 +38,7 @@ body {
 }
 
 .nav-links a {
-    color: #fff; /* White text for better contrast */
+    color: #fff; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -57,15 +56,15 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(139, 69, 19, 0.6); /* Semi-transparent brown overlay */
-    z-index: 1; /* Place overlay above the background image */
+    background-color: rgba(139, 69, 19, 0.6);
+    z-index: 1; 
 }
 
 .slideshow-container {
     position: relative;
     max-width: 100%;
     margin: auto;
-    z-index: 2; /* Ensure slides are above the overlay */
+    z-index: 2; 
 }
 
 .mySlides {
@@ -85,14 +84,14 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: burlywood;
-    z-index: 3; /* Ensure text is above all */
+    z-index: 3; 
 }
 
 .hero-text h1 {
     font-size: 36px;
-    font-family: 'Cursive', sans-serif; /* Cursive font for more aesthetic appeal */
+    font-family: 'Cursive', sans-serif; 
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .hero-text p {
@@ -113,41 +112,41 @@ body {
 /* Produk Section */
 .produk {
     padding: 40px 20px;
-    background-color: #fff; /* Keep product section white */
-    text-align: center; /* Center align text */
+    background-color: #fff; 
+    text-align: center; 
 }
 
 .produk h2 {
-    margin-bottom: 20px; /* Spacing for the heading */
+    margin-bottom: 20px; 
 }
 
 .produk-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Center items and allow wrapping */
+    justify-content: space-around; 
 }
 
 .produk-item {
     text-align: center;
-    width: calc(14.2857% - 20px); /* 7 items in a row with space */
+    width: calc(14.2857% - 20px); 
     margin-bottom: 20px;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box; 
 }
 
 .produk-item img {
-    width: 100%; /* Set width to 100% of the container */
-    height: auto; /* Maintain aspect ratio */
-    aspect-ratio: 1; /* Ensure a square aspect ratio */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly raised effect */
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 1; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .produk-item h3 {
-    margin: 10px 0 5px; /* Spacing for product title */
+    margin: 10px 0 5px; 
 }
 
 .produk-item p {
-    margin: 0; /* Remove default margin for price */
+    margin: 0; 
 }
 
 /* Kontak Section */
@@ -159,14 +158,13 @@ body {
 
 /* Footer */
 footer {
-    background-color: #8B4513; /* Brown footer */
+    background-color: #8B4513; 
     text-align: center;
     padding: 10px;
     color: white;
 }
 
 /* --------- Media Queries ----------- */
-/* Untuk layar dengan lebar maksimal 1024px (Tablet) */
 @media screen and (max-width: 1024px) {
     .produk-container {
         flex-direction: row;
@@ -175,7 +173,7 @@ footer {
     }
 
     .produk-item {
-        width: calc(20% - 20px); /* 5 items in a row for tablet */
+        width: calc(20% - 20px); 
     }
 
     .navbar .container {
@@ -188,10 +186,9 @@ footer {
     }
 }
 
-/* Untuk layar dengan lebar maksimal 768px (Tablet lebih kecil) */
 @media screen and (max-width: 768px) {
     .produk-item {
-        width: calc(33.3333% - 20px); /* 3 items in a row for small tablets */
+        width: calc(33.3333% - 20px); 
     }
 
     .navbar .container {
@@ -217,10 +214,9 @@ footer {
     }
 }
 
-/* Untuk layar dengan lebar maksimal 480px (Smartphone) */
 @media screen and (max-width: 480px) {
     .produk-item {
-        width: 100%; /* Full width for mobile */
+        width: 100%; 
     }
 
     .nav-links li {
