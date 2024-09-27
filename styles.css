@@ -122,39 +122,43 @@ header nav ul li a {
 }
 
 /* Catalog Product Grid */
+.catalog {
+    text-align: center; 
+}
 .product-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-around; 
     padding: 2em;
 }
 
 .product-item {
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ff5e99;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 1em;
     padding: 1em;
     text-align: center;
     transition: transform 0.3s ease;
-    width: 250px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 2px solid #ff5e99;
+    width: 250px; /* Atur lebar item */
 }
 
 .product-item img {
     width: 100%;
-    height: 100%;
+    height: 250px; 
     object-fit: cover;
     border-radius: 10px;
+    
 }
 
-.product-item:hover {
-    transform: scale(1.05);
+.product-item h3 {
+    margin: 10px 0 5px;
+
+}
+
+.product-item p {
+    font-size: 0.9em; 
+    margin-bottom: 10px; 
 }
 
 .product-item button {
@@ -165,8 +169,13 @@ header nav ul li a {
     border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
-    margin-top: 1em;
+    transition: background-color 0.3s ease;
 }
+
+.product-item button:hover {
+    background-color: #ff3c70; 
+}
+
 
 /* Gallery Section */
 .gallery {
