@@ -275,8 +275,6 @@ header nav ul li a:active {
     text-decoration: underline;
 }
 
-<<<<<<< HEAD
-
 /*about*/
 
 .about-item {
@@ -297,8 +295,7 @@ header nav ul li a:active {
 
 }
 
-/* Catalog Product Grid */
-=======
+
 /* Catalog Product Grid */
 .catalog {
     text-align: center; 
@@ -328,7 +325,6 @@ header nav ul li a:active {
     animation: slide 10s ease infinite;
 }
 
->>>>>>> d3efc879da4f30ee76ef0310eba2780d33fdad48
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -429,14 +425,17 @@ header nav ul li a:active {
 
 /* Gallery Section */
 .gallery {
+    text-align: center;
+    color: #ff5e99;
+}
+
+.gallery-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    padding: 2em;
-    background-color: #f7f7f7;
-}
+    padding: 0 4em 0 4em;
 
+}
 .gallery-item {
     width: 250px;
     height: 250px;
@@ -445,6 +444,7 @@ header nav ul li a:active {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
+    background-color: #f7f7f7;
 }
 
 .gallery-item img {
