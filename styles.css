@@ -293,6 +293,31 @@ header nav ul li a:active {
     font-style: italic; 
 }
 
+<<<<<<< HEAD
+
+/*about*/
+
+.about-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 100px 0 100px;
+}
+
+.about-item p {
+    font-size: 1.0em;
+    line-height: 1.5;
+    padding: 0 0 50px 100px;
+}
+
+.about-item img {
+    max-width: 350px;  
+
+}
+
+/* Catalog Product Grid */
+=======
+/* Catalog Product Grid */
 
 /* Catalog Section Styles */z
 .catalog {
@@ -322,6 +347,7 @@ header nav ul li a:active {
     animation: slide 10s ease infinite;
 }
 
+>>>>>>> d3efc879da4f30ee76ef0310eba2780d33fdad48
 .product-grid {
     display: flex;
     flex-wrap: wrap;
