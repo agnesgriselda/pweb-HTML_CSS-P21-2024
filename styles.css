@@ -1,10 +1,16 @@
 /* Global Styles */
 body {
+    height: 100%;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #ffe3e3, #ff5e99);
     color: #333;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; 
 }
 
 header {
@@ -487,7 +493,9 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
-    margin-top: 1em;
+    width: 100%;
+    position: relative; 
+    bottom: 0;
 }
 
 /* Responsive Design */
