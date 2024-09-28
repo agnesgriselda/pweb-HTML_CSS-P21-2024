@@ -154,13 +154,17 @@ header nav ul li a {
 }
 
 .product-item h3 {
-    margin: 10px 0 5px; /* Margin untuk judul */
+    margin: 10px 0 5px; 
+    margin: 10px 0 5px; 
 
 }
 
 .product-item p {
-    font-size: 0.9em; /* Ukuran font untuk deskripsi */
-    margin-bottom: 10px; /* Margin bawah untuk deskripsi */
+
+    font-size: 0.9em; 
+    margin-bottom: 10px; 
+    font-size: 0.9em; 
+    margin-bottom: 10px; 
 }
 
 .product-item button {
@@ -175,8 +179,9 @@ header nav ul li a {
 }
 
 .product-item button:hover {
-    background-color: #ff3c70; /* Ganti warna saat hover */
+    background-color: #ff3c70;
 }
+
 
 
 /* Gallery Section */
@@ -256,7 +261,7 @@ footer {
         margin: 0 auto;
     }
 
-    /* Catalog Product */
+   /* Catalog Product */
     .product-item {
         width: 150px;
         height: 350px;
