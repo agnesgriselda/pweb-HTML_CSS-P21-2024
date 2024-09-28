@@ -12,6 +12,7 @@ header {
     padding: 1em;
 }
 
+/* Navbar Styles */
 header nav ul {
     list-style-type: none;
     text-align: center;
@@ -27,7 +28,45 @@ header nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: 500;
+    padding: 10px 20px;  
+    background-color: #ff5e99;
+    border-radius: 25px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+    position: relative;
+    overflow: hidden;
 }
+
+header nav ul li a:hover {
+    color: white; 
+    background-color: #ff3c70; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-3px); /
+}
+
+header nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+}
+
+header nav ul li a:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Adding a click effect */
+header nav ul li a:active {
+    background-color: #e04887; 
+    transform: scale(0.95); 
+}
+
 
 /* Landing Page Styles */
 .landing {
@@ -35,7 +74,7 @@ header nav ul li a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 8em;
     background-color: #ffe3e3;
     text-align: center;
 }
@@ -79,33 +118,27 @@ header nav ul li a {
 
 /* Hubungi Kami */
 #hubungi {
-    padding: 2em;
+    padding: 0.5;
     background-color: #f7f7f7;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 0.1em;
 }
 
 #hubungi h2 {
     font-size: 2em;
     color: #ff5e99;
-    margin-bottom: 1em;
-}
-
-#hubungi p {
-    font-size: 1.2em;
-    color: #333;
-    margin: 0.5em 0;
+    margin-bottom: 0.1em;
 }
 
 #hubungi a.cta {
     background-color: #ff5e99;
     color: white;
-    padding: 0.8em 1.5em;
+    padding: 1.5em 1.5em;
     text-decoration: none;
     font-weight: 700;
     border-radius: 5px;
     display: inline-block;
-    margin-top: 1em;
+    margin-top: 0.5;
 }
 
 #hubungi a.cta:hover {
@@ -114,7 +147,7 @@ header nav ul li a {
 
 #hubungi p a {
     color: #ff5e99;
-    text-decoration: none;
+    text-decoration: rosybrown;
 }
 
 #hubungi p a:hover {
