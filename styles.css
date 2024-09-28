@@ -12,6 +12,7 @@ header {
     padding: 1em;
 }
 
+/* Navbar Styles */
 header nav ul {
     list-style-type: none;
     text-align: center;
@@ -27,85 +28,238 @@ header nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: 500;
+    padding: 10px 20px;  
+    background-color: #ff5e99;
+    border-radius: 25px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+    position: relative;
+    overflow: hidden;
 }
 
-/* Landing Page Styles */
+header nav ul li a:hover {
+    color: white; 
+    background-color: #ff3c70; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-3px); /
+}
+
+header nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+}
+
+header nav ul li a:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+header nav ul li a:active {
+    background-color: #e04887; 
+    transform: scale(0.95); 
+}
+
+
+/* Landing Section Styles */
 .landing {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 8em;
     background-color: #ffe3e3;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add subtle parallax scrolling effect to landing background */
+.landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 94, 153, 0.4) 0%, rgba(255, 227, 227, 0.9) 100%);
+    z-index: -1;
+    transform: translateY(0px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.landing:hover::before {
+    transform: translateY(10px);
 }
 
 .landing-content {
     flex: 1;
     padding: 1em;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .landing h1 {
     font-size: 2.5em;
     color: #ff5e99;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .landing p {
     font-size: 1.2em;
+    color: #ff5e99;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
 }
 
 .landing-image {
     flex: 1;
     padding: 1em;
+    position: relative;
+    animation: fadeInSlide 1.5s ease-in-out;
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .landing-image img {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
+.landing-image:hover img {
+    transform: scale(1.05); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
+}
+
+/* Add slideshow effect for images */
+@keyframes slideshow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.landing-image img:nth-child(1) {
+    animation: slideshow 8s infinite;
+}
+
+.landing-image img:nth-child(2) {
+    animation: slideshow 8s infinite 4s;
+}
+
+/* Call-to-Action Button */
 .cta {
     background-color: #ff5e99;
     color: white;
     padding: 1em 2em;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 30px;
     margin-top: 1em;
     display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
+
+.cta::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.cta:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.cta:hover {
+    background-color: #ff3c70;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.cta:active {
+    transform: scale(0.95);
+    background-color: #e04887;
+}
+
 
 /* Hubungi Kami */
 #hubungi {
-    padding: 2em;
+    padding: 0.5;
     background-color: #f7f7f7;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 0.1em;
 }
 
 #hubungi h2 {
     font-size: 2em;
     color: #ff5e99;
-    margin-bottom: 1em;
-}
-
-#hubungi p {
-    font-size: 1.2em;
-    color: #333;
-    margin: 0.5em 0;
+    margin-bottom: 0.1em;
 }
 
 #hubungi a.cta {
     background-color: #ff5e99;
     color: white;
-    padding: 0.8em 1.5em;
+    padding: 1.5em 1.5em;
     text-decoration: none;
     font-weight: 700;
     border-radius: 5px;
     display: inline-block;
-    margin-top: 1em;
+    margin-top: 0.5;
 }
 
 #hubungi a.cta:hover {
@@ -114,13 +268,14 @@ header nav ul li a {
 
 #hubungi p a {
     color: #ff5e99;
-    text-decoration: none;
+    text-decoration: rosybrown;
 }
 
 #hubungi p a:hover {
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
 
 /*about*/
 
@@ -143,13 +298,45 @@ header nav ul li a {
 }
 
 /* Catalog Product Grid */
+=======
+/* Catalog Product Grid */
+.catalog {
+    text-align: center; 
+    background: linear-gradient(135deg, #ff5e99, #ffe3e3); /* Gradient background */
+    padding: 3em 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slideshow effect */
+@keyframes slide {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.catalog::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ff5e99, #ffe3e3, #ff3c70, #f7f7f7);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: slide 10s ease infinite;
+}
+
+>>>>>>> d3efc879da4f30ee76ef0310eba2780d33fdad48
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; 
+    justify-content: space-around;
     padding: 2em;
 }
 
+/* Individual product item */
 .product-item {
     background-color: white;
     border: 2px solid #ff5e99;
@@ -158,9 +345,17 @@ header nav ul li a {
     margin: 1em;
     padding: 1em;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 250px; 
     flex: 0 1 calc(20% - 2em);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slideshow animation on hover */
+.product-item:hover {
+    transform: translateY(-10px); /* Makes it 'float' on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens the shadow */
 }
 
 .product-item img {
@@ -168,38 +363,68 @@ header nav ul li a {
     height: 250px; 
     object-fit: cover;
     border-radius: 10px;
-    
+    transition: transform 0.3s ease;
+}
+
+.product-item img:hover {
+    transform: scale(1.1); /* Image zoom effect on hover */
 }
 
 .product-item h3 {
-    margin: 10px 0 5px; 
-    margin: 10px 0 5px; 
-
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #ff5e99;
+    font-weight: 600;
 }
 
 .product-item p {
-
     font-size: 0.9em; 
-    margin-bottom: 10px; 
-    font-size: 0.9em; 
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
+    color: #333;
 }
 
+/* Button with funny effects */
 .product-item button {
     background-color: #ff5e99;
     color: white;
     padding: 0.5em 4em;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .product-item button:hover {
     background-color: #ff3c70;
+    transform: translateY(-3px); /* Button floats up */
 }
 
+.product-item button:active {
+    background-color: #ff5e99;
+    transform: scale(0.95); /* Shrinks slightly when clicked */
+}
+
+/* Button ripple effect */
+.product-item button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.product-item button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
 
 
 /* Gallery Section */
