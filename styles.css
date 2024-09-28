@@ -1,10 +1,16 @@
 /* Global Styles */
 body {
+    height: 100%;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background: linear-gradient(135deg, #ffe3e3, #ff5e99);
     color: #333;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; 
 }
 
 header {
@@ -80,7 +86,6 @@ header nav ul li a:active {
     overflow: hidden;
 }
 
-/* Add subtle parallax scrolling effect to landing background */
 .landing::before {
     content: "";
     position: absolute;
@@ -116,7 +121,7 @@ header nav ul li a:active {
 }
 
 .landing h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #ff5e99;
     margin-bottom: 0.25em;
     letter-spacing: 2px;
@@ -136,7 +141,7 @@ header nav ul li a:active {
 }
 
 .landing p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #ff5e99;
     max-width: 600px;
     margin: 0 auto;
@@ -174,7 +179,6 @@ header nav ul li a:active {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
 }
 
-/* Add slideshow effect for images */
 @keyframes slideshow {
     0%, 100% {
         opacity: 1;
@@ -192,7 +196,6 @@ header nav ul li a:active {
     animation: slideshow 8s infinite 4s;
 }
 
-/* Call-to-Action Button */
 .cta {
     background-color: #ff5e99;
     color: white;
@@ -239,41 +242,61 @@ header nav ul li a:active {
 
 /* Hubungi Kami */
 #hubungi {
-    padding: 0.5;
-    background-color: #f7f7f7;
+    padding: 1.5em;
     text-align: center;
     margin-top: 0.1em;
 }
 
 #hubungi h2 {
     font-size: 2em;
-    color: #ff5e99;
-    margin-bottom: 0.1em;
+    color: #f7f7f7;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    font-weight: 800;
 }
 
 #hubungi a.cta {
     background-color: #ff5e99;
     color: white;
-    padding: 1.5em 1.5em;
+    padding: 1.2em 2em;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 30px;
     display: inline-block;
-    margin-top: 0.5;
+    margin-top: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(255, 94, 153, 0.4);
 }
 
 #hubungi a.cta:hover {
     background-color: #e04887;
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(224, 72, 135, 0.5);
+}
+
+#hubungi p {
+    font-size: 1.1em;
+    color: #fff;
+    margin-top: 1.5em;
 }
 
 #hubungi p a {
     color: #ff5e99;
-    text-decoration: rosybrown;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px dashed #ff5e99; 
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 #hubungi p a:hover {
-    text-decoration: underline;
+    color: #e04887;
+    border-bottom-color: #e04887;
+    text-decoration: underline; 
+    font-style: italic; 
 }
+
 
 /*about*/
 
@@ -298,11 +321,7 @@ header nav ul li a:active {
 
 /* Catalog Product Grid */
 .catalog {
-    text-align: center; 
-    background: linear-gradient(135deg, #ff5e99, #ffe3e3); /* Gradient background */
-    padding: 3em 0;
-    position: relative;
-    overflow: hidden;
+    text-align: center;
 }
 
 /* Slideshow effect */
@@ -325,14 +344,15 @@ header nav ul li a:active {
     animation: slide 10s ease infinite;
 }
 
+
 .product-grid {
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 2em;
 }
 
-/* Individual product item */
 .product-item {
     background-color: white;
     border: 2px solid #ff5e99;
@@ -348,10 +368,9 @@ header nav ul li a:active {
     overflow: hidden;
 }
 
-/* Slideshow animation on hover */
 .product-item:hover {
-    transform: translateY(-10px); /* Makes it 'float' on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens the shadow */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .product-item img {
@@ -363,7 +382,7 @@ header nav ul li a:active {
 }
 
 .product-item img:hover {
-    transform: scale(1.1); /* Image zoom effect on hover */
+    transform: scale(1.1); 
 }
 
 .product-item h3 {
@@ -379,7 +398,6 @@ header nav ul li a:active {
     color: #333;
 }
 
-/* Button with funny effects */
 .product-item button {
     background-color: #ff5e99;
     color: white;
@@ -395,15 +413,14 @@ header nav ul li a:active {
 
 .product-item button:hover {
     background-color: #ff3c70;
-    transform: translateY(-3px); /* Button floats up */
+    transform: translateY(-3px);
 }
 
 .product-item button:active {
     background-color: #ff5e99;
-    transform: scale(0.95); /* Shrinks slightly when clicked */
+    transform: scale(0.95);
 }
 
-/* Button ripple effect */
 .product-item button::before {
     content: "";
     position: absolute;
@@ -422,8 +439,7 @@ header nav ul li a:active {
     transform: translate(-50%, -50%) scale(1);
 }
 
-
-/* Gallery Section */
+/* Gallery Section Styles */
 .gallery {
     text-align: center;
     color: #ff5e99;
@@ -431,32 +447,70 @@ header nav ul li a:active {
 
 .gallery-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0 4em 0 4em;
-
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 1.5em; 
+    padding: 3em 2em;
+    background: linear-gradient(135deg, #ffe3e3, #ff5e99); 
 }
+
 .gallery-item {
     width: 250px;
     height: 250px;
-    margin: 1em;
     border: 3px solid #ff5e99;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     overflow: hidden;
     background-color: #f7f7f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    border-radius: 15px;
+    transition: transform 0.5s ease; 
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.2) rotate(2deg);
+}
+
+.gallery-item::before {
+    content: "View More";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 94, 153, 0.8); 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+    transform: translateY(0); 
+    opacity: 1;
+}
+
+.gallery-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -465,7 +519,9 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
-    margin-top: 2em;
+    width: 100%;
+    position: relative; 
+    bottom: 0;
 }
 
 /* Responsive Design */
