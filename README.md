@@ -1,4 +1,4 @@
-# pweb-HTML_CSS-P21-2024
+# pweb-js-P21-2024
 
 ## Daftar Anggota
 
