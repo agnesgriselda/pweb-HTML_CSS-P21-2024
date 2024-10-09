@@ -102,3 +102,20 @@ document.getElementById('cancel-checkout').addEventListener('click', cancelCheck
 // Load cart on page load
 loadCart();
 updateCartCount();
+
+document.getElementById('shipping-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get shipping information
+    const name = document.getElementById('name').value;
+    const address = document.getElementById('address').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    // Store shipping information in session storage
+    sessionStorage.setItem('shippingInfo', JSON.stringify({ name, address, email, phone }));
+
+    // Proceed to payment (e.g., show payment buttons)
+    alert('Shipping information saved. Now proceed to payment.');
+});
+
