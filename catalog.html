@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katalog Produk - Dippin' Donuts</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,66 +15,31 @@
                 <li><a href="catalog.html">Katalog</a></li>
                 <li><a href="galeri.html">Galeri</a></li>
                 <li><a href="testimoni.html">Testimoni</a></li>
+                <li><a href="cart.html">Cart <img src="assets/icons/cart-icon.png" alt="Cart" id="cart-icon"> (<span id="cart-count">0</span>)</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="catalog">
-        <h1>KATALOG PRODUK</h1>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="assets/img/classic-donut.jpg" alt="Classic Dips">
-                <h3>Classic Dips</h3>
-                <p>Donat klasik dengan topping glaze coklat atau vanila.</p>
-                <button>ORDER</button>
-            </div>
-            <div class="product-item">
-                <img src="assets/img/adventure-donut.jpg" alt="Adventure Dips">
-                <h3>Adventure Dips</h3>
-                <p>Varian donat dengan topping unik dan kreatif.</p>
-                <button>ORDER</button>
-            </div>
-            <div class="product-item">
-                <img src="assets/img/season-donut.jpg" alt="Season's Dippin'">
-                <h3>Season's Dippin'</h3>
-                <p>Donat edisi spesial dengan tema musiman.</p>
-                <button>ORDER</button>
-            </div>  
-            <div class="product-item">
-                <img src="assets/img/almond-donut.jpeg" alt="almond">
-                <h3>Almond Whisper</h3>
-                <p>Donat yang dibalut dengan renyahnya almond panggang</p>
-                <button>ORDER</button>
-            </div>
-            <div class="product-item">
-                <img src="assets/img/matcha-donut.jpeg" alt="matcha">
-                <h3>Matcha Bliss</h3>
-                <p>Donat hijau cerah yang penuh dengan energi matcha.</p>
-                <button>ORDER</button>
-            </div>
-            <div class="product-item">
-                <img src="assets/img/redvelvet-donut.jpeg" alt="redvelvet">
-                <h3>Velvet Dream</h3>
-                <p>Donat merah yang menggoda, dibalut krim keju lembut</p>
-                <button>ORDER</button>
-            </div>  
-            <div class="product-item">
-                <img src="assets/img/banana-donut.jpeg" alt="banana">
-                <h3>Banana Sprinkels'</h3>
-                <p>Donat dengan aroma pisang yang memikat</p>
-                <button>ORDER</button>
-            </div>  
-            <div class="product-item">
-                <img src="assets/img/taro-donut.jpeg" alt="taro">
-                <h3>Taro Delight</h3>
-                <p>Donat lembut berwarna ungu, diisi dengan krim yang creamy</p>
-                <button>ORDER</button>
-            </div>  
-        </div>
+    <section id="filter">
+        <label for="categories">Filter by Category: </label>
+        <select id="categories">
+            <option value="all">All</option>
+            <option value="donat">Donat</option>
+            <option value="roti">Roti</option>
+            <option value="dessert">Dessert</option>
+            <option value="minuman">Minuman</option>
+        </select>
+    </section>
+
+    <section id="products">
+        <!-- Products will be loaded here dynamically -->
     </section>
 
     <footer>
         <p>&copy; 2024 Dippin' Donuts. All rights reserved.</p>
     </footer>
+
+    <!-- Load external JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
