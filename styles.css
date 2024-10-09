@@ -546,6 +546,146 @@ header nav ul li a:active {
     transform: translate(-50%, -50%) scale(1);
 }
 
+/* Cart Page Styling */
+#cart {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.cart-item h3 {
+    color: #ff5e99;
+    font-size: 1.2em;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.cart-item button {
+    background-color: #ff5e99;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-item button:hover {
+    background-color: #ff3c70;
+}
+
+/* Cart Total Styling */
+#cart p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    text-align: right;
+}
+
+#cart-actions {
+    text-align: right;
+}
+
+#cart-actions button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 15px;
+}
+
+#cart-actions button:hover {
+    background-color: #218838;
+}
+
+#cart-actions a.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+#cart-actions a.button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: slideIn 0.3s ease forwards;
+}
+
+.modal-content button {
+    background-color: #ff5e99;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #ff3c70;
+}
+
+.modal-content button.cancel {
+    background-color: #6c757d;
+}
+
+.modal-content button.cancel:hover {
+    background-color: #5a6268;
+}
+
+/* Slide in animation for modal content */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 /* Gallery Section Styles */
 .gallery {
     text-align: center;
